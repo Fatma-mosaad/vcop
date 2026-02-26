@@ -17,16 +17,16 @@ diskSize       = 40                                      # Disk size in GB for e
 
 
 ## Network configuration
-subnet         = "11.1.1"                                # Subnet for the VMs (excluding last octet)
-gateway        = "11.1.1.1"                              # Gateway IP for the subnet
+subnet         = "15.5.15"                                # Subnet for the VMs (excluding last octet)
+gateway        = "15.5.15.1"                              # Gateway IP for the subnet
 cidr           = 24                                      # CIDR notation for the subnet (e.g., /24)
-tag            = 32                                      # VLAN tag or network tag used in Proxmox
-k8sStartIP     = 230                                     # Starting IP address for Kubernetes nodes
-k8sProxyIP     = 236                                    # IP address for Kubernetes proxy
-k8sStorageIP   = 237                                   # IP address for Kubernetes storage
-dbStartIP      = 238                                     # Starting IP address for database VMs
-dnsStartIP     = 243                                     # Starting IP address for DNS VMs
-proxyIP        = 247                                     # IP address used by the HAproxy
+tag            =                                       # VLAN tag or network tag used in Proxmox
+k8sStartIP     = 190                                    # Starting IP address for Kubernetes nodes
+k8sProxyIP     = 196                                    # IP address for Kubernetes proxy
+k8sStorageIP   = 200                                   # IP address for Kubernetes storage
+dbStartIP      = 201                                     # Starting IP address for database VMs
+dnsStartIP     = 204                                     # Starting IP address for DNS VMs
+proxyIP        = 198                                     # IP address used by the HAproxy
 //templatesSrvIP = 222                                    # IP address of the VM hosting templates
 backupSrvIP    = 222                                     # IP address of the backup server
 sshkeys        = ""                                      # SSH public key(s) to inject into VMs
@@ -54,12 +54,12 @@ k8storageCores = 2                                       # CPU cores for Kuberne
 ## Database configuration
 dbMem          = "2048"                                  # Memory in MB for database VM
 dbCores        = "2"                                     # CPU cores for database VM
-dbCount        = "3"
+dbCount        = "0"
 
 ## DNS configuration
 dnsMem         = 2048                                    # Memory in MB for DNS server
 dnsCores       = 2                                       # CPU cores for DNS server
-dnsCount       = 2 
+dnsCount       = 0 
 
 ##temp
 //tempMem        = 2048
